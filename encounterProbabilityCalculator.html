@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script src="jquery-3.6.0.js"></script>
+    <script src="encounterCalculator.js"></script>
+    <style>
+      td {
+        width: 150px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="addMob()">Add Creature</button>
+    <p><table border="3" id="main">
+      <tr id="creature0">
+        <td>
+          &nbsp;Type:&nbsp;&nbsp;&nbsp;&nbsp;<select id="typeCheck0">
+            <option value="player">PC/NPC
+            </option>
+            <option value="monster">Monster
+            </option>
+          </input>
+        </td>
+        <td>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initiative Modifier<br><input id="initMod0"></input>
+        </td>
+      </tr>
+    </table>
+    <p><button onclick="initCalc()">Calculate</button>
+  </body>
+</html>
