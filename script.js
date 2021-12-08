@@ -1,6 +1,6 @@
-import { showStats, sumArray } from 'customFunctions.mjs';
-
 console.log("v0.0.1");
+
+import { showStats, sumArray } from 'customFunctions.mjs';
 
 var stats = {
     "str": 12,
