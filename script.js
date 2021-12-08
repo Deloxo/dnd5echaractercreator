@@ -1,5 +1,7 @@
 import { showStats, sumArray } from 'customFunctions.mjs';
 
+console.log("v0.0.1");
+
 var stats = {
     "str": 12,
     "dex": 12,

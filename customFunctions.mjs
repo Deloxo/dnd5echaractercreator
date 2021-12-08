@@ -1,4 +1,4 @@
-export function showStats() {
+function showStats() {
   document.getElementById("str").innerHTML = stats.str;
   document.getElementById("dex").innerHTML = stats.dex;
   document.getElementById("con").innerHTML = stats.con;
@@ -7,7 +7,7 @@ export function showStats() {
   document.getElementById("cha").innerHTML = stats.cha;
 }
 
-export function sumArray(array) {
+function sumArray(array) {
     for (
         var
             index = 0, // The iterator
@@ -18,3 +18,5 @@ export function sumArray(array) {
     );
     return sum;
 }
+
+export { showStats, sumArray }; 
