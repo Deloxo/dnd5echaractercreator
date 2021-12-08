@@ -2,10 +2,10 @@
 
 <head>
 
-    <script src="https://deloxo.github.io/raceBonuses.js">
+    <script src="raceBonuses.js">
     </script>
 
-    <link rel="stylesheet" href="https://deloxo.github.io/style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -407,8 +407,9 @@
                 </select>
               -->
 
-        <span class="classChoose"></span>
-        <span class="raceChoose"></span>
+
+              <span class="raceChoose" onclick="chooseRace()">RACE</span>
+              <span class="classChoose" onclick="chooseClass()">CLASS</span>
         <p>
 
             <span class="strpos statlabel">STR</span> <span class="strpos statscore" id="str">15</span> <span id="racialStrBonus" style="color: blue;"></span>
@@ -438,6 +439,21 @@
         <span id="dumpButton" onclick="pullAllStatsOut()">D</span>
 
         <span class="infopanel statbox" id="statbox"></span>
+
+        <span class="menuOption" id="option0" onclick="choose(0)"></span>
+        <span class="menuOption" id="option1" onclick="choose(1)"></span>
+        <span class="menuOption" id="option2" onclick="choose(2)"></span>
+        <span class="menuOption" id="option3" onclick="choose(3)"></span>
+        <span class="menuOption" id="option4" onclick="choose(4)"></span>
+        <span class="menuOption" id="option5" onclick="choose(5)"></span>
+        <span class="menuOption" id="option6" onclick="choose(6)"></span>
+        <span class="menuOption" id="option7" onclick="choose(7)"></span>
+        <span class="menuOption" id="option8" onclick="choose(8)"></span>
+        <span class="menuOption" id="option9" onclick="choose(9)"></span>
+        <span class="menuOption" id="option10" onclick="choose(10)"></span>
+        <span class="menuOption" id="option11" onclick="choose(11)"></span>
+        <span class="menuOption" id="option12" onclick="choose(12)"></span>
+        <span class="menuOption" id="option13" onclick="choose(13)"></span>
     </div>
 
     <script src="script.js">
