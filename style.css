@@ -1,5 +1,5 @@
 .arrow {
-    background-image: url(https://deloxo.github.io/arrow.png);
+    background-image: url(arrow.png);
     width: 33px;
     height: 19px;
     border: none;
@@ -25,7 +25,119 @@
     height: 100px;
     top: 130px;
     left: 75px;
+    text-align: center;
+    line-height: 100px;
+    user-select: none;
 }
+
+.menuOption {
+  border: 2px black solid;
+  width: 60px;
+  height: 60px;
+  transform: translate(-50%);
+  border-radius: 100%;
+  background-color: white;
+  box-shadow: 0px 0px 3px 1px;
+}
+
+#option0 {
+  position: absolute;
+  top: 55px;
+  left: 175px;
+  visibility: hidden;
+}
+
+#option1 {
+  position: absolute;
+  top: 55px;
+  left: 250px;
+  visibility: hidden;
+}
+
+#option2 {
+  position: absolute;
+  top: 55px;
+  left: 325px;
+  visibility: hidden;
+}
+
+#option3 {
+  position: absolute;
+  top: 55px;
+  left: 400px;
+  visibility: hidden;
+}
+
+#option4 {
+  position: absolute;
+  top: 55px;
+  left: 475px;
+  visibility: hidden;
+}
+
+#option5 {
+  position: absolute;
+  top: 55px;
+  left: 550px;
+  visibility: hidden;
+}
+
+#option6 {
+  position: absolute;
+  top: 55px;
+  left: 625px;
+  visibility: hidden;
+}
+
+#option7 {
+  position: absolute;
+  top: 130px;
+  left: 175px;
+  visibility: hidden;
+}
+
+#option8 {
+  position: absolute;
+  top: 130px;
+  left: 250px;
+  visibility: hidden;
+}
+
+#option9 {
+  position: absolute;
+  top: 130px;
+  left: 325px;
+  visibility: hidden;
+}
+
+#option10 {
+  position: absolute;
+  top: 130px;
+  left: 400px;
+  visibility: hidden;
+}
+
+#option11 {
+  position: absolute;
+  top: 130px;
+  left: 475px;
+  visibility: hidden;
+}
+
+#option12 {
+  position: absolute;
+  top: 130px;
+  left: 550px;
+  visibility: hidden;
+}
+
+#option13 {
+  position: absolute;
+  top: 130px;
+  left: 625px;
+  visibility: hidden;
+}
+
 
 .raceChoose {
     border: 3px black solid;
@@ -36,6 +148,9 @@
     height: 100px;
     top: 15px;
     left: 75px;
+    text-align: center;
+    line-height: 100px;
+    user-select: none;
 }
 
 .switchBody {
@@ -73,7 +188,7 @@
 }
 
 .up {
-    background-image: url(https://deloxo.github.io/uparrow.png);
+    background-image: url(uparrow.png);
     top: 20px;
 }
 
@@ -155,12 +270,4 @@
 .subraceSelect {
     position: absolute;
     visibility: hidden;
-}
-
-#chooseRace {}
-
-#chooseClass {}
-
-td {
-    width: 200px;
 }
