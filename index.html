@@ -2,201 +2,18 @@
 
 <head>
 
-    <script>
-var raceBonuses = {
-"dragonborn" : [0,0,0,0,0,0,0],
-"dwarf" : [0,0,2,0,0,0,0],
-"elf" : [0,2,0,0,0,0,0],
-"gnome" : [0,0,0,2,0,0,0],
-"halfelf" : [0,0,0,0,0,2,2],
-"halforc" : [2,0,1,0,0,0,0],
-"halfling" : [0,2,0,0,0,0,0],
-"human" : [0,0,0,0,0,0,0],
-"tiefling" : [0,0,0,0,0,2,0],
-"aarakocra" : [0,2,0,0,1,0,0],
-"aasimar" : [0,0,0,0,0,2,0],
-"fairy" : [0,0,0,0,0,0,3],
-"firbolg" : [1,0,0,0,2,0,0],
-"genasi" : [0,0,2,0,0,0,0],
-"gith" : [0,0,0,1,0,0,0],
-"goliath" : [2,0,1,0,0,0,0],
-"harengon" : [0,0,0,0,0,0,3],
-"kenku" : [0,2,0,0,1,0,0],
-"locathah" : [2,1,0,0,0,0,0],
-"tabaxi" : [0,2,0,0,0,1,0],
-"tortle" : [2,0,0,0,1,0,0],
-"triton" : [1,1,0,0,0,1,0],
-"bugbear" : [2,1,0,0,0,0,0],
-"centaur" : [2,0,0,0,1,0,0],
-"goblin" : [0,2,1,0,0,0,0],
-"grung" : [0,2,1,0,0,0,0],
-"hobgoblin" : [0,0,2,1,0,0,0],
-"kobold" : [0,2,0,0,0,0,0],
-"lizardfolk" : [0,0,2,0,1,0,0],
-"minotaur" : [0,0,0,0,0,0,0],
-"orc" : [2,0,1,0,0,0,0],
-"yuantipureblood" : [0,0,0,1,0,2,0],
-"autognome" : [0,0,0,0,0,0,3],
-"dhamphir" : [0,0,0,0,0,0,2],
-"giff" : [0,0,0,0,0,0,3],
-"hadozee" : [0,0,0,0,0,0,3],
-"hexblood" : [0,0,0,0,0,0,2],
-"fairy" : [0,0,0,0,0,0,2],
-"owlfolk" : [0,0,0,0,0,0,2],
-"plasmoid" : [0,0,0,0,0,0,3],
-"rabbitfolk" : [0,0,0,0,0,0,2],
-"reborn" : [0,0,0,0,0,0,2],
-"revenant" : [0,0,1,0,0,0,0],
-"thri-kreen" : [0,0,0,0,0,0,3],
-"changeling" : [0,0,0,0,0,2,1],
-"kalashtar" : [0,0,0,0,2,1,0],
-"shifter" : [0,1,0,0,0,0,0],
-"warforged" : [0,0,2,0,0,0,1],
-"aetherborn" : [0,0,0,0,0,2,2],
-"aven" : [0,2,0,0,0,0,0],
-"khenra" : [1,2,0,0,0,0,0],
-"kor" : [0,2,0,0,1,0,0],
-"merfolk" : [0,0,0,0,0,1,0],
-"naga" : [0,0,2,0,1,0,0],
-"vampire" : [0,0,0,1,0,2,0],
-"dhamphir" : [0,0,0,0,0,0,3],
-"hexblood" : [0,0,0,0,0,0,3],
-"reborn" : [0,0,0,0,0,0,3],
-"loxodon" : [0,0,2,0,1,0,0],
-"simichybrid" : [0,0,2,0,0,0,1],
-"vedalken" : [0,0,0,2,1,0,0],
-"viashino" : [1,2,0,0,0,0,0],
-"leonin" : [1,0,2,0,0,0,0],
-"satyr" : [0,1,0,0,0,2,0],
-"standard-dragonbornSub" : [2,0,0,0,0,1,0],
-"draconbloodSub" : [0,0,0,2,0,1,0],
-"raveniteSub" : [2,0,1,0,0,0,0],
-"chromatic-dragonbornSub" : [0,0,0,0,0,0,3],
-"gem-dragonbornSub" : [0,0,0,0,0,0,3],
-"metallic-dragonbornSub" : [0,0,0,0,0,0,3],
-"hill-dwarfSub" : [0,0,0,0,1,0,0],
-"mountain-dwarfSub" : [2,0,0,0,0,0,0],
-"deurgarSub" : [1,0,0,0,0,0,0],
-"kaladesh-dwarfSub" : [0,0,2,0,1,0,0],
-"dark-elfSub" : [0,0,0,0,0,1,0],
-"tome-of-foes-eladrinSub" : [0,0,0,0,0,1,0],
-"dmg-eladrinSub" : [0,0,0,1,0,0,0],
-"high-elfSub" : [0,0,0,1,0,0,0],
-"sea-elfSub" : [0,0,1,0,0,0,0],
-"shadar-kaiSub" : [0,0,1,0,0,0,0],
-"wood-elfSub" : [0,0,0,0,1,0,0],
-"pallid-elfSub" : [0,0,0,0,1,0,0],
-"avariel-elfSub" : [1,0,0,0,0,0,0],
-"grugach-elfSub" : [1,0,0,0,0,0,0],
-"bishtaharSub" : [0,0,0,0,1,0,0],
-"tiraharSub" : [0,0,0,0,1,0,0],
-"vahadarSub" : [0,0,0,0,1,0,0],
-"zendikar-elfSub" : [0,-2,0,0,2,0,0],
-"astral-elfSub" : [0,0,0,0,0,0,2],
-"forest-gnomeSub" : [0,1,0,0,0,0,0],
-"rock-gnomeSub" : [0,0,1,0,0,0,0],
-"svirfneblinSub" : [0,1,0,0,0,0,0],
-"lightfoot-halflingSub" : [0,0,0,0,0,1,0],
-"stout-halflingSub" : [0,0,1,0,0,0,0],
-"ghostwise-halflingSub" : [0,0,0,0,1,0,0],
-"lotusden-halflingSub" : [0,0,0,0,1,0,0],
-"standard-humanSub" : [1,1,1,1,1,1,0],
-"variant-humanSub" : [0,0,0,0,0,0,2],
-"bloodline-of-asmodeusSub" : [0,0,0,1,0,0,0],
-"bloodline-of-baalzebulSub" : [0,0,0,1,0,0,0],
-"bloodline-of-dispaterSub" : [0,1,0,0,0,0,0],
-"bloodline-of-fiernaSub" : [0,0,0,0,1,0,0],
-"bloodline-of-glasyaSub" : [0,1,0,0,0,0,0],
-"bloodline-of-levistusSub" : [0,0,1,0,0,0,0],
-"bloodline-of-mammonSub" : [0,0,0,1,0,0,0],
-"bloodline-of-mephistophelesSub" : [0,0,0,1,0,0,0],
-"bloodline-of-zarielSub" : [1,0,0,0,0,0,0],
-"abyssal-tieflingSub" : [0,0,1,0,0,0,0],
-"protector-aasimarSub" : [0,0,0,0,1,0,0],
-"scourge-aasimarSub" : [0,0,1,0,0,0,0],
-"fallen-aasimarSub" : [1,0,0,0,0,0,0],
-"air-genasiSub" : [0,1,0,0,0,0,0],
-"earth-genasiSub" : [1,0,0,0,0,0,0],
-"fire-genasiSub" : [0,0,0,1,0,0,0],
-"water-genasiSub" : [0,0,0,0,1,0,0],
-"githyankiSub" : [2,0,0,0,0,0,0],
-"githzeraiSub" : [0,0,0,0,2,0,0],
-"dankwood-goblinSub" : [0,2,0,0,1,0,0],
-"ixalan-goblinSub" : [0,2,0,0,0,0,0],
-"zendikar-goblinSub" : [0,0,2,0,0,0,0],
-"hobgoblin-of-the-feywildSub" : [0,0,0,0,0,0,2],
-"ua78-koboldSub" : [0,0,0,0,0,0,3],
-"ravnica-minotaurSub" : [2,0,1,0,0,0,0],
-"theros-minotaurSub" : [2,0,1,0,0,0,0],
-"amonkhet-minotaurSub" : [2,0,1,0,0,0,0],
-"eberron-orcSub" : [2,0,1,0,0,0,0],
-"exandria-orcSub" : [2,0,1,0,0,0,0],
-"ixalan-orcSub" : [2,0,1,0,0,0,0],
-"aebruvian-orcSub" : [2,0,1,0,0,0,0],
-"beasthideSub" : [0,0,1,0,0,0,0],
-"longtoothSub" : [2,0,0,0,0,0,0],
-"swiftstrideSub" : [0,1,0,0,0,1,0],
-"wildhuntSub" : [0,1,0,0,2,0,0],
-"cliffwalkSub" : [0,1,0,0,0,0,0],
-"razorclawSub" : [0,1,0,0,0,0,0],
-"envoySub" : [0,0,0,0,0,0,2],
-"juggernautSub" : [2,0,0,0,0,0,0],
-"skirmisherSub" : [0,2,0,0,0,0,0],
-"ibis-headed-avenSub" : [0,0,0,1,0,0,0],
-"hawk-headed-avenSub" : [0,0,0,0,2,0,0],
-"ixalan-merfolkSub" : [0,0,0,0,0,1,0],
-"zendikar-merfolkSub" : [0,0,0,0,0,1,0],
-"ixalan-vampireSub" : [0,0,0,1,0,2,0],
-"zendikar-vampireSub" : [0,0,0,1,0,2,0],
-"vampire-of-the-azure-wavesSub" : [0,0,0,1,0,2,0],
-"kaladesh-vedalkenSub" : [0,0,0,2,1,0,0]
-};
-
+    <script src="raceBonuses.js">
     </script>
 
-    <style>
-        .subclassSelect {
-            position: absolute;
-            visibility: hidden;
-            width: inherit;
-        }
-
-        .subraceSelect {
-            position: absolute;
-            visibility: hidden;
-            width: inherit;
-        }
-
-        #chooseRace {
-            width: inherit;
-        }
-
-        #chooseClass {
-            width: inherit;
-        }
-
-        td {
-            width: 200px;
-        }
-
-        #strUp {
-            visibility: hidden;
-        }
-
-
-        #chaDown {
-            visibility: hidden;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-    Name: <input type="text" id="name" name="name">
-    <table>
-        <tr>
-            <td>
+    <div id="applicationBody">
+        <br>
+        <!--
                 <select onChange="showSubrace()" name="race" id="chooseRace">
                     <option value="unpicked">Choose a Race</option>
                     <option value="dragonborn">Dragonborn</option>
@@ -265,8 +82,6 @@ var raceBonuses = {
                     <option value="leonin">Leonin</option>
                     <option value="satyr">Satyr</option>
                 </select>
-            </td>
-            <td>
                 <select onChange="showSubclass()" name="class" id="chooseClass">
                     <option value="unpicked">Choose a Class</option>
                     <option value="artificer">Artificer</option>
@@ -284,10 +99,6 @@ var raceBonuses = {
                     <option value="warlock">Warlock</option>
                     <option value="wizard">Wizard</option>
                 </select>
-            </td>
-        </tr>
-        <tr>
-            <td>
                 <select class="subraceSelect" onchange="subraceChange('dragonborn')" id="dragonbornSubraces">
                     <option value="unpicked">Choose a Subrace</option>
                     <option value="standard-dragonborn">Standard Dragonborn
@@ -432,9 +243,6 @@ var raceBonuses = {
                     <option value="unpicked">Choose a Subrace</option>
                     <option value="kaladesh-vedalken">Kaladesh Vedalken</option>
                 </select>
-            </td>
-            <td>
-
                 <select class="subclassSelect" onchange="subclassChange('artificer')" id="artificerSubclasses">
                     <option value="unpicked">Choose a Subclass</option>
                     <option value="alchemist">Alchemist</option>
@@ -597,401 +405,42 @@ var raceBonuses = {
                     <option value="transmutation">Transmutation</option>
                     <option value="warmagic">War Magic</option>
                 </select>
-            </td>
-        </tr>
-    </table>
+              -->
 
-    <p>
+        <span class="classChoose"></span>
+        <span class="raceChoose"></span>
+        <p>
 
-    <div id="statsdiv"> Point Buy: <input type="checkbox" id="pointbuy" name="pointbuy" value="pointbuy" onchange="checkForPointBuy()"></div>
-    <div id="weakDiv"> Roll Dice <input type="checkbox" id="randomize" name="randomize" value="randomize" onchange="checkForRandom()"></div>
+            <span class="strpos statlabel">STR</span> <span class="strpos statscore" id="str">15</span> <span id="racialStrBonus" style="color: blue;"></span>
+            <button onclick="changeStat('strUp')" class="up arrow strpos" id="strUp"></button>
+            <button onclick="changeStat('strDown')" class="down arrow strpos" id="strDown"></button>
+            <span class="dexpos statlabel">DEX</span> <span class="dexpos statscore" id="dex">14</span> <span id="racialDexBonus" style="color: blue;"></span>
+            <button onclick="changeStat('dexUp')" class="up arrow dexpos" id="dexUp"></button>
+            <button onclick="changeStat('dexDown')" class="down arrow dexpos" id="dexDown"></button>
+            <span class="conpos statlabel">CON</span> <span class="conpos statscore" id="con">13</span> <span id="racialConBonus" style="color: blue;"></span>
+            <button onclick="changeStat('conUp')" class="up arrow conpos" id="conUp"></button>
+            <button onclick="changeStat('conDown')" class="down arrow conpos" id="conDown"></button>
+            <span class="intpos statlabel">INT</span> <span class="intpos statscore" id="int">12</span> <span id="racialIntBonus" style="color: blue;"></span>
+            <button onclick="changeStat('intUp')" class="up arrow intpos" id="intUp"></button>
+            <button onclick="changeStat('intDown')" class="down arrow intpos" id="intDown"></button>
+            <span class="wispos statlabel">WIS</span> <span class="wispos statscore" id="wis">10</span> <span id="racialWisBonus" style="color: blue;"></span>
+            <button onclick="changeStat('wisUp')" class="up arrow wispos" id="wisUp"></button>
+            <button onclick="changeStat('wisDown')" class="down arrow wispos" id="wisDown"></button>
+            <span class="chapos statlabel">CHA</span> <span class="chapos statscore" id="cha">8</span> <span id="racialChaBonus" style="color: blue;"></span>
+            <button onclick="changeStat('chaUp')" class="up arrow chapos" id="chaUp"></button>
+            <button onclick="changeStat('chaDown')" class="down arrow chapos" id="chaDown"></button>
 
-    <p>
+            <span class="switchlabel points">POINTS</span>
+            <span class="switchlabel dice">DICE</span>
+        <div class="switchBody"></div>
+        <div class="switchNub" onclick="switchModes()"></div>
 
-    <table border="2">
-        <tr>
-            <td id="str">
-                Strength: <span id="strScore">15</span> <span id="racialStrBonus" style="color: blue;"></span>
-            </td>
-            <td>
-                <button onclick="changeStat('strUp')" id="strUp">↑</button>
-                <button onclick="changeStat('strDown')" id="strDown">↓</button>
-            </td>
-        </tr>
-        <tr>
-            <td id="dex">
-                Dexterity: <span id="dexScore">14</span> <span id="racialDexBonus" style="color: blue;"></span>
-            </td>
-            <td>
-                <button onclick="changeStat('dexUp')" id="dexUp">↑</button>
-                <button onclick="changeStat('dexDown')" id="dexDown">↓</button>
-            </td>
-        </tr>
-        <tr>
-            <td id="con">
-                Constitution: <span id="conScore">13</span> <span id="racialConBonus" style="color: blue;"></span>
-            </td>
-            <td>
-                <button onclick="changeStat('conUp')" id="conUp">↑</button>
-                <button onclick="changeStat('conDown')" id="conDown">↓</button>
-            </td>
-        </tr>
-        <tr>
-            <td id="int">
-                Intelligence: <span id="intScore">12</span> <span id="racialIntBonus" style="color: blue;"></span>
-            </td>
-            <td>
-                <button onclick="changeStat('intUp')" id="intUp">↑</button>
-                <button onclick="changeStat('intDown')" id="intDown">↓</button>
-            </td>
-        </tr>
-        <tr>
-            <td id="wis">
-                Wisdom: <span id="wisScore">10</span> <span id="racialWisBonus" style="color: blue;"></span>
-            </td>
-            <td>
-                <button onclick="changeStat('wisUp')" id="wisUp">↑</button>
-                <button onclick="changeStat('wisDown')" id="wisDown">↓</button>
-            </td>
-        </tr>
-        <tr>
-            <td id="cha">
-                Charisma: <span id="chaScore">8</span> <span id="racialChaBonus" style="color: blue;"></span>
-            </td>
-            <td>
-                <button onclick="changeStat('chaUp')" id="chaUp">↑</button>
-                <button onclick="changeStat('chaDown')" id="chaDown">↓</button>
-            </td>
-        </tr>
-    </table>
-    <script>
-        var stats = {
-            "str": 15,
-            "dex": 14,
-            "con": 13,
-            "int": 12,
-            "wis": 10,
-            "cha": 8
-        }
+        <span id="dumpButton" onclick="pullAllStatsOut()">D</span>
 
-        var temp;
-        var pointbuy = false;
-        var randomstats = false;
-        const reducer = (previousValue, currentValue) => previousValue + currentValue;
-        var statsTotal = stats.str + stats.dex + stats.con + stats.int + stats.wis + stats.cha;
-        var points = 0;
+        <span class="infopanel statbox" id="statbox"></span>
+    </div>
 
-        function showSubrace() {
-            document.getElementById("dragonbornSubraces").style.visibility = "hidden";
-            document.getElementById("dwarfSubraces").style.visibility = "hidden";
-            document.getElementById("elfSubraces").style.visibility = "hidden";
-            document.getElementById("gnomeSubraces").style.visibility = "hidden";
-            document.getElementById("halflingSubraces").style.visibility = "hidden";
-            document.getElementById("humanSubraces").style.visibility = "hidden";
-            document.getElementById("tieflingSubraces").style.visibility = "hidden";
-            document.getElementById("aasimarSubraces").style.visibility = "hidden";
-            document.getElementById("genasiSubraces").style.visibility = "hidden";
-            document.getElementById("githSubraces").style.visibility = "hidden";
-            document.getElementById("goblinSubraces").style.visibility = "hidden";
-            document.getElementById("hobgoblinSubraces").style.visibility = "hidden";
-            document.getElementById("koboldSubraces").style.visibility = "hidden";
-            document.getElementById("minotaurSubraces").style.visibility = "hidden";
-            document.getElementById("orcSubraces").style.visibility = "hidden";
-            document.getElementById("shifterSubraces").style.visibility = "hidden";
-            document.getElementById("warforgedSubraces").style.visibility = "hidden";
-            document.getElementById("avenSubraces").style.visibility = "hidden";
-            document.getElementById("merfolkSubraces").style.visibility = "hidden";
-            document.getElementById("vampireSubraces").style.visibility = "hidden";
-            document.getElementById("vedalkenSubraces").style.visibility = "hidden";
-            if (document.getElementById("chooseRace").value != "") {
-                document.getElementById(document.getElementById("chooseRace").value + "Subraces").style.visibility = "visible";
-            }
-        }
-
-        function showSubclass() {
-            document.getElementById("artificerSubclasses").style.visibility = "hidden";
-            document.getElementById("barbarianSubclasses").style.visibility = "hidden";
-            document.getElementById("bardSubclasses").style.visibility = "hidden";
-            document.getElementById("bloodhunterSubclasses").style.visibility = "hidden";
-            document.getElementById("clericSubclasses").style.visibility = "hidden";
-            document.getElementById("druidSubclasses").style.visibility = "hidden";
-            document.getElementById("fighterSubclasses").style.visibility = "hidden";
-            document.getElementById("monkSubclasses").style.visibility = "hidden";
-            document.getElementById("paladinSubclasses").style.visibility = "hidden";
-            document.getElementById("rangerSubclasses").style.visibility = "hidden";
-            document.getElementById("rogueSubclasses").style.visibility = "hidden";
-            document.getElementById("sorcererSubclasses").style.visibility = "hidden";
-            document.getElementById("warlockSubclasses").style.visibility = "hidden";
-            document.getElementById("wizardSubclasses").style.visibility = "hidden";
-            document.getElementById(document.getElementById("chooseClass").value + "Subclasses").style.visibility = "visible";
-        }
-
-        function statSeed() {
-
-        }
-
-        function checkForPointBuy() {
-          var theostatsTotal = stats.str + stats.dex + stats.con + stats.int + stats.wis + stats.cha;
-          var confirmPointBuy = confirm("This will take the current total of your stats to buy with (" + theostatsTotal + "). You may not randomize its stats once you select point buy. Are you sure?")
-          document.getElementById("pointbuy").checked = false;
-          if (pointbuy == false && confirmPointBuy == true) {
-              statsTotal = stats.str + stats.dex + stats.con + stats.int + stats.wis + stats.cha;
-              document.getElementById("statsdiv").innerHTML = 0;
-              document.getElementById("weakDiv").style.visibility = "hidden";
-              points = 0;
-              pointbuy = true;
-              document.getElementById("chaDown").style.visibility = "visible";
-              document.getElementById("strUp").style.visibility = "visible";
-          }
-        }
-
-        function sumArray(array) {
-            for (
-                var
-                    index = 0, // The iterator
-                    length = array.length, // Cache the array length
-                    sum = 0; // The total amount
-                index < length; // The "for"-loop condition
-                sum += array[index++] // Add number on each iteration
-            );
-            return sum;
-        }
-
-        function checkForRandom() {
-            var confirmRandom = confirm("This action will only roll once for this character. Are you sure?");
-            document.getElementById("randomize").checked = false;
-            if (randomstats == false && confirmRandom == true) {
-                document.getElementById("weakDiv").style.visibility = "hidden";
-                randomstats = true;
-                for (x = 0; x < 6; x++) {
-                    var statsdice = [Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1];
-                    statsdice.sort();
-                    console.log(statsdice);
-                    statsdice.shift();
-                    var result = sumArray(statsdice);
-                    console.log(result);
-                    switch (x) {
-                        case 0:
-                            stats.str = result;
-                            break;
-                        case 1:
-                            stats.dex = result;
-                            break;
-                        case 2:
-                            stats.con = result;
-                            break;
-                        case 3:
-                            stats.int = result;
-                            break;
-                        case 4:
-                            stats.wis = result;
-                            break;
-                        case 5:
-                            stats.cha = result;
-                            break;
-                    }
-                }
-                document.getElementById("strScore").innerHTML = stats.str;
-                document.getElementById("dexScore").innerHTML = stats.dex;
-                document.getElementById("conScore").innerHTML = stats.con;
-                document.getElementById("intScore").innerHTML = stats.int;
-                document.getElementById("wisScore").innerHTML = stats.wis;
-                document.getElementById("chaScore").innerHTML = stats.cha;
-            }
-        }
-
-        function changeStat(move) {
-            console.log(move);
-            if (pointbuy == false) {
-                switch (move) {
-                    case 'strUp':
-                        break;
-                    case 'strDown':
-                        temp = stats.str;
-                        stats.str = stats.dex;
-                        stats.dex = temp;
-                        document.getElementById("strScore").innerHTML = stats.str;
-                        document.getElementById("dexScore").innerHTML = stats.dex;
-                        break;
-                    case 'dexUp':
-                        temp = stats.dex;
-                        stats.dex = stats.str;
-                        stats.str = temp;
-                        document.getElementById("strScore").innerHTML = stats.str;
-                        document.getElementById("dexScore").innerHTML = stats.dex;
-                        break;
-                    case 'dexDown':
-                        temp = stats.dex;
-                        stats.dex = stats.con;
-                        stats.con = temp;
-                        document.getElementById("conScore").innerHTML = stats.con;
-                        document.getElementById("dexScore").innerHTML = stats.dex;
-                        break;
-                    case 'conUp':
-                        temp = stats.con;
-                        stats.con = stats.dex;
-                        stats.dex = temp;
-                        document.getElementById("conScore").innerHTML = stats.con;
-                        document.getElementById("dexScore").innerHTML = stats.dex;
-                        break;
-                    case 'conDown':
-                        temp = stats.con;
-                        stats.con = stats.int;
-                        stats.int = temp;
-                        document.getElementById("conScore").innerHTML = stats.con;
-                        document.getElementById("intScore").innerHTML = stats.int;
-                        break;
-                    case 'intUp':
-                        temp = stats.int;
-                        stats.int = stats.con;
-                        stats.con = temp;
-                        document.getElementById("conScore").innerHTML = stats.con;
-                        document.getElementById("intScore").innerHTML = stats.int;
-                        break;
-                    case 'intDown':
-                        temp = stats.int;
-                        stats.int = stats.wis;
-                        stats.wis = temp;
-                        document.getElementById("wisScore").innerHTML = stats.wis;
-                        document.getElementById("intScore").innerHTML = stats.int;
-                        break;
-                    case 'wisUp':
-                        temp = stats.wis;
-                        stats.wis = stats.int;
-                        stats.int = temp;
-                        document.getElementById("wisScore").innerHTML = stats.wis;
-                        document.getElementById("intScore").innerHTML = stats.int;
-                        break;
-                    case 'wisDown':
-                        temp = stats.wis;
-                        stats.wis = stats.cha;
-                        stats.cha = temp;
-                        document.getElementById("wisScore").innerHTML = stats.wis;
-                        document.getElementById("chaScore").innerHTML = stats.cha;
-                        break;
-                    case 'chaUp':
-                        temp = stats.cha;
-                        stats.cha = stats.wis;
-                        stats.wis = temp;
-                        document.getElementById("wisScore").innerHTML = stats.wis;
-                        document.getElementById("chaScore").innerHTML = stats.cha;
-                    case 'chaDown':
-                        break;
-                }
-            }
-            if (pointbuy == true) {
-                switch (move) {
-                    case 'strUp':
-                      if (points > 0) {
-                        stats.str++;
-                        points--;
-                        document.getElementById("strScore").innerHTML = stats.str;
-                        document.getElementById("statsdiv").innerHTML = points;
-                      }
-                      break;
-                    case 'strDown':
-                      stats.str--;
-                      points++;
-                      document.getElementById("strScore").innerHTML = stats.str;
-                      document.getElementById("statsdiv").innerHTML = points;
-                      break;
-                    case 'dexUp':
-                      if (points > 0) {
-                        stats.dex++;
-                        points--;
-                        document.getElementById("dexScore").innerHTML = stats.dex;
-                        document.getElementById("statsdiv").innerHTML = points;
-                      }
-                      break;
-                    case 'dexDown':
-                        stats.dex--;
-                        points++;
-                        document.getElementById("dexScore").innerHTML = stats.dex;
-                        document.getElementById("statsdiv").innerHTML = points;
-                        break;
-                    case 'conUp':
-                      if (points > 0) {
-                        stats.con++;
-                        points--;
-                        document.getElementById("conScore").innerHTML = stats.con;
-                        document.getElementById("statsdiv").innerHTML = points;
-                      }
-                      break;
-                    case 'conDown':
-                        stats.con--;
-                        points++;
-                        document.getElementById("conScore").innerHTML = stats.con;
-                        document.getElementById("statsdiv").innerHTML = points;
-                        break;
-                    case 'intUp':
-                      if (points > 0) {
-                        stats.int++;
-                        points--;
-                        document.getElementById("intScore").innerHTML = stats.int;
-                        document.getElementById("statsdiv").innerHTML = points;
-                      }
-                      break;
-                    case 'intDown':
-                        stats.int--;
-                        points++;
-                        document.getElementById("intScore").innerHTML = stats.int;
-                        document.getElementById("statsdiv").innerHTML = points;
-                        break;
-                    case 'wisUp':
-                      if (points > 0) {
-                        stats.wis++;
-                        points--;
-                        document.getElementById("wisScore").innerHTML = stats.wis;
-                        document.getElementById("statsdiv").innerHTML = points;
-                      }
-                      break;
-                    case 'wisDown':
-                        stats.wis--;
-                        points++;
-                        document.getElementById("wisScore").innerHTML = stats.wis;
-                        document.getElementById("statsdiv").innerHTML = points;
-                        break;
-                    case 'chaUp':
-                      if (points > 0) {
-                        stats.cha++;
-                        points--;
-                        document.getElementById("chaScore").innerHTML = stats.cha;
-                        document.getElementById("statsdiv").innerHTML = points;
-                      }
-                      break;
-                    case 'chaDown':
-                      stats.cha--;
-                      points++;
-                      document.getElementById("chaScore").innerHTML = stats.cha;
-                      document.getElementById("statsdiv").innerHTML = points;
-                      break;
-                }
-            }
-        }
-
-        function subclassChange(change) {
-
-        }
-
-        function subraceChange(race) {
-          var subrace = document.getElementById(race + "Subraces").value;
-          racesCheck = Object.keys(raceBonuses);
-          if (document.getElementById(race + "Subraces").value == race || typeof(document.getElementById(race + "Subraces").value) != undefined) {
-            document.getElementById("racialStrBonus").innerHTML = "+" + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(race)][1][0]);
-            document.getElementById("racialDexBonus").innerHTML = "+" + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(race)][1][1]);
-            document.getElementById("racialConBonus").innerHTML = "+" + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(race)][1][2]);
-            document.getElementById("racialIntBonus").innerHTML = "+" + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(race)][1][3]);
-            document.getElementById("racialWisBonus").innerHTML = "+" + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(race)][1][4]);
-            document.getElementById("racialChaBonus").innerHTML = "+" + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(race)][1][5]);
-          } else {
-          document.getElementById("racialStrBonus").innerHTML = "+" + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(race)][1][0]) + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(subrace)][1][0]);
-          document.getElementById("racialDexBonus").innerHTML = "+" + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(race)][1][1]) + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(subrace)][1][1]);
-          document.getElementById("racialConBonus").innerHTML = "+" + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(race)][1][2]) + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(subrace)][1][2]);
-          document.getElementById("racialIntBonus").innerHTML = "+" + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(race)][1][3]) + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(subrace)][1][3]);
-          document.getElementById("racialWisBonus").innerHTML = "+" + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(race)][1][4]) + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(subrace)][1][4]);
-          document.getElementById("racialChaBonus").innerHTML = "+" + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(race)][1][5]) + parseInt(Object.entries(raceBonuses)[racesCheck.indexOf(subrace)][1][5]);
-}
-        }
+    <script src="script.js">
     </script>
 
 </body>
