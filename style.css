@@ -1,0 +1,166 @@
+.arrow {
+    background-image: url(arrow.png);
+    width: 33px;
+    height: 19px;
+    border: none;
+    background-color: white;
+    position: absolute;
+    transform: translate(-50%);
+}
+
+.switchLabel {
+    position: absolute;
+    transform: translate(-50%);
+    left: 380;
+    font-size: 12px;
+    top: 108px;
+}
+
+.classChoose {
+    border: 3px black solid;
+    border-radius: 100%;
+    transform: translate(-50%);
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 130px;
+    left: 75px;
+}
+
+.raceChoose {
+    border: 3px black solid;
+    border-radius: 100%;
+    transform: translate(-50%);
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 15px;
+    left: 75px;
+}
+
+.switchBody {
+    border: 3px black solid;
+    height: 60px;
+    width: 30px;
+    position: absolute;
+    transform: translate(-50%);
+    left: 380px;
+    top: 40px;
+}
+
+#dumpButton {
+    font-weight: bold;
+    font-size: 15px;
+    position: absolute;
+    top: 80px;
+    left: 337px;
+    user-select: none;
+}
+
+.switchNub {
+    border: 3px #999999 outset;
+    background-color: gray;
+    height: 35px;
+    width: 24px;
+    position: absolute;
+    transform: translate(-50%);
+    left: 380px;
+    top: 62px;
+}
+
+.dice {
+    top: 25px;
+}
+
+.up {
+    background-image: url(uparrow.png);
+    top: 20px;
+}
+
+.down {
+    top: 100px;
+}
+
+.statlabel {
+    color: #666666;
+    font-size: 15px;
+    position: absolute;
+    top: 82px;
+    transform: translate(-50%);
+    user-select: none;
+}
+
+.statscore {
+    font-size: 40px;
+    position: absolute;
+    top: 45px;
+    transform: translate(-50%);
+    user-select: none;
+}
+
+
+
+.strpos {
+    left: 460px;
+}
+
+.dexpos {
+    left: 540px;
+}
+
+.conpos {
+    left: 620px;
+}
+
+.intpos {
+    left: 700px;
+}
+
+.wispos {
+    left: 780px;
+}
+
+.chapos {
+    left: 860px;
+}
+
+#applicationBody {
+    border: 1px solid black;
+    width: 900px;
+    height: 900px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.infopanel {
+    border: 3px black solid;
+    position: absolute;
+    transform: translate(-50%);
+    top: 30px;
+    left: 280px;
+    height: 80px;
+    width: 80px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 80px;
+    vertical-align: middle;
+    user-select: none;
+}
+
+.subclassSelect {
+    position: absolute;
+    visibility: hidden;
+}
+
+.subraceSelect {
+    position: absolute;
+    visibility: hidden;
+}
+
+#chooseRace {}
+
+#chooseClass {}
+
+td {
+    width: 200px;
+}
