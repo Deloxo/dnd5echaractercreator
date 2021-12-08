@@ -2,10 +2,10 @@
 
 <head>
 
-    <script src="https://deloxo.github.io/raceBonuses.js">
+    <script src="raceBonuses.js">
     </script>
 
-    <link rel="stylesheet" href="https://deloxo.github.io/style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -17,22 +17,22 @@
               <span class="classChoose" onclick="chooseClass()">CLASS</span>
         <p>
 
-            <span class="strpos statlabel">STR</span> <span class="strpos statscore" id="str">15</span> <span id="racialStrBonus" style="color: blue;"></span>
+            <span class="strpos statlabel">STR</span> <span class="strpos statscore" id="str"></span> <span id="racialStrBonus" style="color: blue;"></span>
             <button onclick="changeStat('strUp')" class="up arrow strpos" id="strUp"></button>
             <button onclick="changeStat('strDown')" class="down arrow strpos" id="strDown"></button>
-            <span class="dexpos statlabel">DEX</span> <span class="dexpos statscore" id="dex">14</span> <span id="racialDexBonus" style="color: blue;"></span>
+            <span class="dexpos statlabel">DEX</span> <span class="dexpos statscore" id="dex"></span> <span id="racialDexBonus" style="color: blue;"></span>
             <button onclick="changeStat('dexUp')" class="up arrow dexpos" id="dexUp"></button>
             <button onclick="changeStat('dexDown')" class="down arrow dexpos" id="dexDown"></button>
-            <span class="conpos statlabel">CON</span> <span class="conpos statscore" id="con">13</span> <span id="racialConBonus" style="color: blue;"></span>
+            <span class="conpos statlabel">CON</span> <span class="conpos statscore" id="con"></span> <span id="racialConBonus" style="color: blue;"></span>
             <button onclick="changeStat('conUp')" class="up arrow conpos" id="conUp"></button>
             <button onclick="changeStat('conDown')" class="down arrow conpos" id="conDown"></button>
-            <span class="intpos statlabel">INT</span> <span class="intpos statscore" id="int">12</span> <span id="racialIntBonus" style="color: blue;"></span>
+            <span class="intpos statlabel">INT</span> <span class="intpos statscore" id="int"></span> <span id="racialIntBonus" style="color: blue;"></span>
             <button onclick="changeStat('intUp')" class="up arrow intpos" id="intUp"></button>
             <button onclick="changeStat('intDown')" class="down arrow intpos" id="intDown"></button>
-            <span class="wispos statlabel">WIS</span> <span class="wispos statscore" id="wis">10</span> <span id="racialWisBonus" style="color: blue;"></span>
+            <span class="wispos statlabel">WIS</span> <span class="wispos statscore" id="wis"></span> <span id="racialWisBonus" style="color: blue;"></span>
             <button onclick="changeStat('wisUp')" class="up arrow wispos" id="wisUp"></button>
             <button onclick="changeStat('wisDown')" class="down arrow wispos" id="wisDown"></button>
-            <span class="chapos statlabel">CHA</span> <span class="chapos statscore" id="cha">8</span> <span id="racialChaBonus" style="color: blue;"></span>
+            <span class="chapos statlabel">CHA</span> <span class="chapos statscore" id="cha"></span> <span id="racialChaBonus" style="color: blue;"></span>
             <button onclick="changeStat('chaUp')" class="up arrow chapos" id="chaUp"></button>
             <button onclick="changeStat('chaDown')" class="down arrow chapos" id="chaDown"></button>
 
@@ -45,23 +45,25 @@
 
         <span class="infopanel statbox" id="statbox"></span>
 
-        <span class="menuOption" id="option0" onclick="choose(0)"></span>
-        <span class="menuOption" id="option1" onclick="choose(1)"></span>
-        <span class="menuOption" id="option2" onclick="choose(2)"></span>
-        <span class="menuOption" id="option3" onclick="choose(3)"></span>
-        <span class="menuOption" id="option4" onclick="choose(4)"></span>
-        <span class="menuOption" id="option5" onclick="choose(5)"></span>
-        <span class="menuOption" id="option6" onclick="choose(6)"></span>
-        <span class="menuOption" id="option7" onclick="choose(7)"></span>
-        <span class="menuOption" id="option8" onclick="choose(8)"></span>
-        <span class="menuOption" id="option9" onclick="choose(9)"></span>
-        <span class="menuOption" id="option10" onclick="choose(10)"></span>
-        <span class="menuOption" id="option11" onclick="choose(11)"></span>
-        <span class="menuOption" id="option12" onclick="choose(12)"></span>
-        <span class="menuOption" id="option13" onclick="choose(13)"></span>
+        <span class="menuOption" id="option0" onclick="chooseOption('0')"></span>
+        <span class="menuOption" id="option1" onclick="chooseOption('1')"></span>
+        <span class="menuOption" id="option2" onclick="chooseOption('2')"></span>
+        <span class="menuOption" id="option3" onclick="chooseOption('3')"></span>
+        <span class="menuOption" id="option4" onclick="chooseOption('4')"></span>
+        <span class="menuOption" id="option5" onclick="chooseOption('5')"></span>
+        <span class="menuOption" id="option6" onclick="chooseOption('6')"></span>
+        <span class="menuOption" id="option7" onclick="chooseOption('7')"></span>
+        <span class="menuOption" id="option8" onclick="chooseOption('8')"></span>
+        <span class="menuOption" id="option9" onclick="chooseOption('9')"></span>
+        <span class="menuOption" id="option10" onclick="chooseOption('10')"></span>
+        <span class="menuOption" id="option11" onclick="chooseOption('11')"></span>
+        <span class="menuOption" id="option12" onclick="chooseOption('12')"></span>
+        <span class="menuOption" id="option13" onclick="chooseOption('13')"></span>
     </div>
 
-    <script src="https://deloxo.github.io/script.js">
+    <script src="script.js">
+    </script>
+    <script src="customFunctions.mjs">
     </script>
 
 </body>

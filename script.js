@@ -1,11 +1,15 @@
+import { showStats, sumArray } from 'customFunctions.mjs';
+
 var stats = {
-    "str": 15,
-    "dex": 14,
-    "con": 13,
+    "str": 12,
+    "dex": 12,
+    "con": 12,
     "int": 12,
-    "wis": 10,
-    "cha": 8
+    "wis": 12,
+    "cha": 12
 }
+
+showStats();
 
 var temp;
 var pointbuy = false;
@@ -13,55 +17,6 @@ var randomstats = false;
 const reducer = (previousValue, currentValue) => previousValue + currentValue;
 var statsTotal = stats.str + stats.dex + stats.con + stats.int + stats.wis + stats.cha;
 var points = 0;
-
-function showSubrace() {
-    document.getElementById("dragonbornSubraces").style.visibility = "hidden";
-    document.getElementById("dwarfSubraces").style.visibility = "hidden";
-    document.getElementById("elfSubraces").style.visibility = "hidden";
-    document.getElementById("gnomeSubraces").style.visibility = "hidden";
-    document.getElementById("halflingSubraces").style.visibility = "hidden";
-    document.getElementById("humanSubraces").style.visibility = "hidden";
-    document.getElementById("tieflingSubraces").style.visibility = "hidden";
-    document.getElementById("aasimarSubraces").style.visibility = "hidden";
-    document.getElementById("genasiSubraces").style.visibility = "hidden";
-    document.getElementById("githSubraces").style.visibility = "hidden";
-    document.getElementById("goblinSubraces").style.visibility = "hidden";
-    document.getElementById("hobgoblinSubraces").style.visibility = "hidden";
-    document.getElementById("koboldSubraces").style.visibility = "hidden";
-    document.getElementById("minotaurSubraces").style.visibility = "hidden";
-    document.getElementById("orcSubraces").style.visibility = "hidden";
-    document.getElementById("shifterSubraces").style.visibility = "hidden";
-    document.getElementById("warforgedSubraces").style.visibility = "hidden";
-    document.getElementById("avenSubraces").style.visibility = "hidden";
-    document.getElementById("merfolkSubraces").style.visibility = "hidden";
-    document.getElementById("vampireSubraces").style.visibility = "hidden";
-    document.getElementById("vedalkenSubraces").style.visibility = "hidden";
-    if (document.getElementById("chooseRace").value != "") {
-        document.getElementById(document.getElementById("chooseRace").value + "Subraces").style.visibility = "visible";
-    }
-}
-
-function showSubclass() {
-    document.getElementById("artificerSubclasses").style.visibility = "hidden";
-    document.getElementById("barbarianSubclasses").style.visibility = "hidden";
-    document.getElementById("bardSubclasses").style.visibility = "hidden";
-    document.getElementById("bloodhunterSubclasses").style.visibility = "hidden";
-    document.getElementById("clericSubclasses").style.visibility = "hidden";
-    document.getElementById("druidSubclasses").style.visibility = "hidden";
-    document.getElementById("fighterSubclasses").style.visibility = "hidden";
-    document.getElementById("monkSubclasses").style.visibility = "hidden";
-    document.getElementById("paladinSubclasses").style.visibility = "hidden";
-    document.getElementById("rangerSubclasses").style.visibility = "hidden";
-    document.getElementById("rogueSubclasses").style.visibility = "hidden";
-    document.getElementById("sorcererSubclasses").style.visibility = "hidden";
-    document.getElementById("warlockSubclasses").style.visibility = "hidden";
-    document.getElementById("wizardSubclasses").style.visibility = "hidden";
-    document.getElementById(document.getElementById("chooseClass").value + "Subclasses").style.visibility = "visible";
-}
-
-function statSeed() {
-
-}
 
 function checkForPointBuy() {
     var theostatsTotal = stats.str + stats.dex + stats.con + stats.int + stats.wis + stats.cha;
@@ -76,18 +31,6 @@ function checkForPointBuy() {
         document.getElementById("chaDown").style.visibility = "visible";
         document.getElementById("strUp").style.visibility = "visible";
     }
-}
-
-function sumArray(array) {
-    for (
-        var
-            index = 0, // The iterator
-            length = array.length, // Cache the array length
-            sum = 0; // The total amount
-        index < length; // The "for"-loop condition
-        sum += array[index++] // Add number on each iteration
-    );
-    return sum;
 }
 
 function checkForRandom() {
@@ -330,19 +273,33 @@ function chooseRace() {
     extended = false
     optionmode = "";
     document.getElementById("option0").style.visibility = "hidden";
+    document.getElementById("option0").innerHTML = "";
     document.getElementById("option1").style.visibility = "hidden";
+    document.getElementById("option1").innerHTML = "";
     document.getElementById("option2").style.visibility = "hidden";
+    document.getElementById("option2").innerHTML = "";
     document.getElementById("option3").style.visibility = "hidden";
+    document.getElementById("option3").innerHTML = "";
     document.getElementById("option4").style.visibility = "hidden";
+    document.getElementById("option4").innerHTML = "";
     document.getElementById("option5").style.visibility = "hidden";
+    document.getElementById("option5").innerHTML = "";
     document.getElementById("option6").style.visibility = "hidden";
+    document.getElementById("option6").innerHTML = "";
     document.getElementById("option7").style.visibility = "hidden";
+    document.getElementById("option7").innerHTML = "";
     document.getElementById("option8").style.visibility = "hidden";
+    document.getElementById("option8").innerHTML = "";
     document.getElementById("option9").style.visibility = "hidden";
+    document.getElementById("option9").innerHTML = "";
     document.getElementById("option10").style.visibility = "hidden";
+    document.getElementById("option10").innerHTML = "";
     document.getElementById("option11").style.visibility = "hidden";
+    document.getElementById("option11").innerHTML = "";
     document.getElementById("option12").style.visibility = "hidden";
+    document.getElementById("option12").innerHTML = "";
     document.getElementById("option13").style.visibility = "hidden";
+    document.getElementById("option13").innerHTML = "";
   }
 }
 
@@ -350,6 +307,7 @@ function chooseClass() {
   if (extended == false) {
     extended = true;
     optionmode = "class";
+    console.log("test");
     document.getElementById("option0").style.visibility = "visible";
     document.getElementById("option0").innerHTML = "Artificer";
     document.getElementById("option1").style.visibility = "visible";
@@ -357,7 +315,7 @@ function chooseClass() {
     document.getElementById("option2").style.visibility = "visible";
     document.getElementById("option2").innerHTML = "Bard";
     document.getElementById("option3").style.visibility = "visible";
-    document.getElementById("option3").innerHTML = "Blood Hunter";
+    document.getElementById("option3").innerHTML = "Blood";
     document.getElementById("option4").style.visibility = "visible";
     document.getElementById("option4").innerHTML = "Cleric";
     document.getElementById("option5").style.visibility = "visible";
@@ -382,70 +340,74 @@ function chooseClass() {
     extended = false;
     optionmode = "";
     document.getElementById("option0").style.visibility = "hidden";
+    document.getElementById("option0").innerHTML = "";
     document.getElementById("option1").style.visibility = "hidden";
+    document.getElementById("option1").innerHTML = "";
     document.getElementById("option2").style.visibility = "hidden";
+    document.getElementById("option2").innerHTML = "";
     document.getElementById("option3").style.visibility = "hidden";
+    document.getElementById("option3").innerHTML = "";
     document.getElementById("option4").style.visibility = "hidden";
+    document.getElementById("option4").innerHTML = "";
     document.getElementById("option5").style.visibility = "hidden";
+    document.getElementById("option5").innerHTML = "";
     document.getElementById("option6").style.visibility = "hidden";
+    document.getElementById("option6").innerHTML = "";
     document.getElementById("option7").style.visibility = "hidden";
+    document.getElementById("option7").innerHTML = "";
     document.getElementById("option8").style.visibility = "hidden";
+    document.getElementById("option8").innerHTML = "";
     document.getElementById("option9").style.visibility = "hidden";
+    document.getElementById("option9").innerHTML = "";
     document.getElementById("option10").style.visibility = "hidden";
+    document.getElementById("option10").innerHTML = "";
     document.getElementById("option11").style.visibility = "hidden";
+    document.getElementById("option11").innerHTML = "";
     document.getElementById("option12").style.visibility = "hidden";
+    document.getElementById("option12").innerHTML = "";
     document.getElementById("option13").style.visibility = "hidden";
+    document.getElementById("option13").innerHTML = "";
     }
 }
 
-function choose(option) {
-    document.getElementById("option0").style.visibility = "hidden";
-    document.getElementById("option1").style.visibility = "hidden";
-    document.getElementById("option2").style.visibility = "hidden";
-    document.getElementById("option3").style.visibility = "hidden";
-    document.getElementById("option4").style.visibility = "hidden";
-    document.getElementById("option5").style.visibility = "hidden";
-    document.getElementById("option6").style.visibility = "hidden";
-    document.getElementById("option7").style.visibility = "hidden";
-    document.getElementById("option8").style.visibility = "hidden";
-    document.getElementById("option9").style.visibility = "hidden";
-    document.getElementById("option10").style.visibility = "hidden";
-    document.getElementById("option11").style.visibility = "hidden";
-    document.getElementById("option12").style.visibility = "hidden";
-    document.getElementById("option13").style.visibility = "hidden";
-    if (optionmode = "class") {
-      switch (option) {
-        case 0:
-        case 1:
-        case 2:
-        case 3:
-        case 4:
-        case 5:
-        case 6:
-        case 7:
-        case 8:
-        case 9:
-        case 10:
-        case 11:
-        case 12:
-        case 13:
-      }
-    }
-    if (optionmode = "race") {
-      switch (option) {
-        case 0:
-        case 1:
-        case 2:
-        case 3:
-        case 4:
-        case 7:
-        case 8:
-        case 9:
-        case 10:
-        case 11:
-      }
-    }
-
+function chooseOption(option) {
+  if (optionmode == "class") {
+    console.log(document.getElementById("option" + option).innerHTML);
+    document.getElementsByClassName("classChoose")[0].innerHTML = document.getElementById("option" + option).innerHTML;
+  }
+  if (optionmode == "race") {
+      document.getElementsByClassName("raceChoose")[0].innerHTML = document.getElementById("option" + option).innerHTML;
+      console.log(document.getElementById("option" + option).innerHTML);
+  }
+  console.log(document.getElementById("option" + option).innerHTML);
+  document.getElementById("option0").style.visibility = "hidden";
+  document.getElementById("option0").innerHTML = "";
+  document.getElementById("option1").style.visibility = "hidden";
+  document.getElementById("option1").innerHTML = "";
+  document.getElementById("option2").style.visibility = "hidden";
+  document.getElementById("option2").innerHTML = "";
+  document.getElementById("option3").style.visibility = "hidden";
+  document.getElementById("option3").innerHTML = "";
+  document.getElementById("option4").style.visibility = "hidden";
+  document.getElementById("option4").innerHTML = "";
+  document.getElementById("option5").style.visibility = "hidden";
+  document.getElementById("option5").innerHTML = "";
+  document.getElementById("option6").style.visibility = "hidden";
+  document.getElementById("option6").innerHTML = "";
+  document.getElementById("option7").style.visibility = "hidden";
+  document.getElementById("option7").innerHTML = "";
+  document.getElementById("option8").style.visibility = "hidden";
+  document.getElementById("option8").innerHTML = "";
+  document.getElementById("option9").style.visibility = "hidden";
+  document.getElementById("option9").innerHTML = "";
+  document.getElementById("option10").style.visibility = "hidden";
+  document.getElementById("option10").innerHTML = "";
+  document.getElementById("option11").style.visibility = "hidden";
+  document.getElementById("option11").innerHTML = "";
+  document.getElementById("option12").style.visibility = "hidden";
+  document.getElementById("option12").innerHTML = "";
+  document.getElementById("option13").style.visibility = "hidden";
+  document.getElementById("option13").innerHTML = "";
   extended = false;
   optionmode = "";
 }

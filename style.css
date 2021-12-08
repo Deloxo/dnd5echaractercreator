@@ -1,5 +1,5 @@
 .arrow {
-    background-image: url(https://deloxo.github.io/arrow.png);
+    background-image: url(arrow.png);
     width: 33px;
     height: 19px;
     border: none;
@@ -191,7 +191,7 @@
 }
 
 .up {
-    background-image: url(https://deloxo.github.io/uparrow.png);
+    background-image: url(uparrow.png);
     top: 20px;
 }
 
