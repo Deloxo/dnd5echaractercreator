@@ -77,7 +77,7 @@ function changeStat(move) {
     stats += Math.pow(-1, move + 1);
     points -= Math.pow(-1, move + 1);
   }
-  document.getElementsByClassName(Object.keys(stats)[statInd])).innerHTML = stats[Object.keys(stats)[statInd]];
+  document.getElementsByClassName(Object.keys(stats)[statInd]).innerHTML = stats[Object.keys(stats)[statInd]];
   document.getElementById("statbox").innerHTML = points;
 }
 /*
