@@ -280,8 +280,6 @@ function sumArray(array) {
 
 document.addEventListener('mousemove', function(e) {
   let circle = document.getElementById('tooltip');
-  let left = e.offsetX;
-  let top = e.offsetY;
-  tooltip.style.left = left + 'px';
-  tooltip.style.top = top + 'px';
+  tooltip.style.top = e.clientY + 25 + 'px';
+  tooltip.style.left = e.clientX + 13 +'px';
 });
