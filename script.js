@@ -73,124 +73,23 @@ function checkForRandom() {
 
 function changeStat(move) {
   var statInd = Math.floor(((move + 1) / 2) - 0.5);
-  console.log(statInd);
-  if (stats[Object.keys(stats)[statInd]] >= 0 && points >= 0) {
-    stats[Object.keys(stats)[statInd]] += Math.pow(-1, move);
+  var localstat = stats[Object.keys(stats)[statInd]];
+  if (localstat >= 0 && points >= 0) {
+    localstat += Math.pow(-1, move);
     points -= Math.pow(-1, move);
     if (points == -1) {
-      stats[Object.keys(stats)[statInd]] -= 1;
+      localstat -= 1;
       points += 1;
     }
-    if (stats[Object.keys(stats)[statInd]] == 0) {
-      stats[Object.keys(stats)[statInd]] += 1;
+    if (localstat == 0) {
+      localstat += 1;
       points -= 1;
     }
   }
-  document.getElementById(Object.keys(stats)[statInd]).innerHTML = stats[Object.keys(stats)[statInd]];
+  document.getElementById(Object.keys(stats)[statInd]).innerHTML = localstat;
   document.getElementById("statbox").innerHTML = points;
 }
-/*
-function changeStat(move) {
-    switch (move) {
-        case 'strUp':
-            if (points > 0) {
-                stats.str++;
-                points--;
-                document.getElementById("str").innerHTML = stats.str;
-                document.getElementById("statbox").innerHTML = points;
-            }
-            break;
-        case 'strDown':
-            if (stats.str > 0) {
-                stats.str--;
-                points++;
-                document.getElementById("str").innerHTML = stats.str;
-                document.getElementById("statbox").innerHTML = points;
-            }
-            break;
-        case 'dexUp':
-            if (points > 0) {
-                stats.dex++;
-                points--;
-                document.getElementById("dex").innerHTML = stats.dex;
-                document.getElementById("statbox").innerHTML = points;
-            }
-            break;
-        case 'dexDown':
-            if (stats.dex > 0) {
-                stats.dex--;
-                points++;
-                document.getElementById("dex").innerHTML = stats.dex;
-                document.getElementById("statbox").innerHTML = points;
-            }
-            break;
-        case 'conUp':
-            if (points > 0) {
-                stats.con++;
-                points--;
-                document.getElementById("con").innerHTML = stats.con;
-                document.getElementById("statbox").innerHTML = points;
-            }
-            break;
-        case 'conDown':
-            if (stats.con > 0) {
-                stats.con--;
-                points++;
-                document.getElementById("con").innerHTML = stats.con;
-                document.getElementById("statbox").innerHTML = points;
-            }
-            break;
-        case 'intUp':
-            if (points > 0) {
-                stats.int++;
-                points--;
-                document.getElementById("int").innerHTML = stats.int;
-                document.getElementById("statbox").innerHTML = points;
-            }
-            break;
-        case 'intDown':
-            if (stats.int > 0) {
-                stats.int--;
-                points++;
-                document.getElementById("int").innerHTML = stats.int;
-                document.getElementById("statbox").innerHTML = points;
-            }
-            break;
-        case 'wisUp':
-            if (points > 0) {
-                stats.wis++;
-                points--;
-                document.getElementById("wis").innerHTML = stats.wis;
-                document.getElementById("statbox").innerHTML = points;
-            }
-            break;
-        case 'wisDown':
-            if (stats.wis > 0) {
-                stats.wis--;
-                points++;
-                document.getElementById("wis").innerHTML = stats.wis;
-                document.getElementById("statbox").innerHTML = points;
-            }
-            break;
-        case 'chaUp':
-            if (points > 0) {
-                stats.cha++;
-                points--;
-                document.getElementById("cha").innerHTML = stats.cha;
-                document.getElementById("statbox").innerHTML = points;
-            }
-            break;
-        case 'chaDown':
-            if (stats.cha > 0) {
-                stats.cha--;
-                points++;
-                document.getElementById("cha").innerHTML = stats.cha;
-                document.getElementById("statbox").innerHTML = points;
-            }
-            break;
-    }
-}
-*/
+
 var mode = 'points';
 
 function switchModes() {
