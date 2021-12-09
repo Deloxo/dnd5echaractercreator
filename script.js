@@ -74,9 +74,10 @@ function checkForRandom() {
 function changeStat(move) {
   var statInd = (move + 1) / 2;
   stats[statInd]++;
-  points--;
+  points -= Math.Pow(-1, move + 1);
   document.getElementsByClassName(Object.keys(stats)[statInd]).innerHTML = stats[statInd];
   document.getElementById("statbox").innerHTML = points;
+  showStats();
 }
 /*
 function changeStat(move) {
