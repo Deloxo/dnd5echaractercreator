@@ -72,10 +72,10 @@ function checkForRandom() {
 }
 
 function changeStat(move) {
-  var statInd = Math.floor((move + 1) / 2);
+  var statInd = Math.floor(((move + 1) / 2) - 0.5);
   console.log(statInd);
-  stats[Object.keys(stats)[statInd]] -= Math.pow(-1, move + 1);
-  points += Math.pow(-1, move + 1);
+  stats[Object.keys(stats)[statInd]] += Math.pow(-1, move);
+  points -= Math.pow(-1, move);
   document.getElementById(Object.keys(stats)[statInd]).innerHTML = stats[Object.keys(stats)[statInd]];
   document.getElementById("statbox").innerHTML = points;
 }
