@@ -1,6 +1,6 @@
 #tooltip {
   position:absolute;
-  transform:translate(-50%,-50%);
+  transform:translate(-50%);
   height:35px;
   width:35px;
   border-radius:50%;
