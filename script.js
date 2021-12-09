@@ -74,12 +74,16 @@ function checkForRandom() {
 function changeStat(move) {
   var statInd = Math.floor(((move + 1) / 2) - 0.5);
   console.log(statInd);
-  if (stats[Object.keys(stats)[statInd]] > 0 && points >= 0) {
+  if (stats[Object.keys(stats)[statInd]] >= 0 && points >= 0) {
     stats[Object.keys(stats)[statInd]] += Math.pow(-1, move);
     points -= Math.pow(-1, move);
     if (points == -1) {
       stats[Object.keys(stats)[statInd]] -= 1;
       points += 1;
+    }
+    if (stats[Object.keys(stats)[statInd]] == 0) {
+      stats[Object.keys(stats)[statInd]] += 1;
+      points -= 1;
     }
   }
   document.getElementById(Object.keys(stats)[statInd]).innerHTML = stats[Object.keys(stats)[statInd]];
