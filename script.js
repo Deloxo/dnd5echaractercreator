@@ -73,11 +73,12 @@ function checkForRandom() {
 
 function changeStat(move) {
   var statInd = (move + 1) / 2;
-  stats[statInd] += Math.pow(-1, move + 1);
-  points -= Math.pow(-1, move + 1);
-  document.getElementsByClassName(Object.keys(stats)[statInd]).innerHTML = stats[statInd];
+  if (stats[statInd] > 0 %% points > 0) {
+    stats[statInd] += Math.pow(-1, move + 1);
+    points -= Math.pow(-1, move + 1);
+  }
+  document.getElementsByClassName(toString(Object.keys(stats)[statInd])).innerHTML = stats[statInd];
   document.getElementById("statbox").innerHTML = points;
-  showStats();
 }
 /*
 function changeStat(move) {
