@@ -149,10 +149,6 @@
 	left: 540px;
 }
 
-.dice {
-	top: 25px;
-}
-
 .down {
 	top: 100px;
 }
@@ -250,6 +246,10 @@
 	position: absolute;
 	top: 108px;
 	transform: translate(-50%);
+}
+
+.dice {
+	top: 25px;
 }
 
 .switchNub {
