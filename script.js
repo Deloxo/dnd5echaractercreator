@@ -272,34 +272,10 @@ function chooseRace() {
   } else if (extended == true) {
     extended = false
     optionmode = "";
-    document.getElementById("option0").style.visibility = "hidden";
-    document.getElementById("option0").innerHTML = "";
-    document.getElementById("option1").style.visibility = "hidden";
-    document.getElementById("option1").innerHTML = "";
-    document.getElementById("option2").style.visibility = "hidden";
-    document.getElementById("option2").innerHTML = "";
-    document.getElementById("option3").style.visibility = "hidden";
-    document.getElementById("option3").innerHTML = "";
-    document.getElementById("option4").style.visibility = "hidden";
-    document.getElementById("option4").innerHTML = "";
-    document.getElementById("option5").style.visibility = "hidden";
-    document.getElementById("option5").innerHTML = "";
-    document.getElementById("option6").style.visibility = "hidden";
-    document.getElementById("option6").innerHTML = "";
-    document.getElementById("option7").style.visibility = "hidden";
-    document.getElementById("option7").innerHTML = "";
-    document.getElementById("option8").style.visibility = "hidden";
-    document.getElementById("option8").innerHTML = "";
-    document.getElementById("option9").style.visibility = "hidden";
-    document.getElementById("option9").innerHTML = "";
-    document.getElementById("option10").style.visibility = "hidden";
-    document.getElementById("option10").innerHTML = "";
-    document.getElementById("option11").style.visibility = "hidden";
-    document.getElementById("option11").innerHTML = "";
-    document.getElementById("option12").style.visibility = "hidden";
-    document.getElementById("option12").innerHTML = "";
-    document.getElementById("option13").style.visibility = "hidden";
-    document.getElementById("option13").innerHTML = "";
+    for (x = 0; x < 14; x++) {
+      document.getElementById("option"+x).style.visibility = "hidden";
+      document.getElementById("option"+x).innerHTML = "";
+    }
   }
 }
 
