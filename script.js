@@ -135,13 +135,13 @@ function subraceChange(race) {
 
 
 function pullAllStatsOut() {
-    points = points + stats.str + stats.dex + stats.con + stats.int + stats.wis + stats.cha;
-    stats.str = 0;
-    stats.dex = 0;
-    stats.con = 0;
-    stats.int = 0;
-    stats.wis = 0;
-    stats.cha = 0;
+    points = points + stats.str + stats.dex + stats.con + stats.int + stats.wis + stats.cha - 6;
+    stats.str = 1;
+    stats.dex = 1;
+    stats.con = 1;
+    stats.int = 1;
+    stats.wis = 1;
+    stats.cha = 1;
     document.getElementById("str").innerHTML = stats.str;
     document.getElementById("dex").innerHTML = stats.dex;
     document.getElementById("con").innerHTML = stats.con;
