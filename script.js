@@ -73,7 +73,7 @@ function checkForRandom() {
 
 function changeStat(move) {
   var statInd = (move + 1) / 2;
-  if (Math.sign(stats[Object.keys(stats)[statInd]]) > 0 && points >= 0) {
+  if (stats[Object.keys(stats)[statInd]] > 0 && points >= 0) {
     stats += Math.pow(-1, move + 1);
     points -= Math.pow(-1, move + 1);
   }
