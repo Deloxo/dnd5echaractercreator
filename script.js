@@ -281,5 +281,5 @@ function sumArray(array) {
 document.addEventListener('mousemove', function(e) {
   let circle = document.getElementById('tooltip');
   tooltip.style.top = e.clientY + 25 + 'px';
-  tooltip.style.left = e.clientX + 13 +'px';
+  tooltip.style.left = e.clientX + 65 +'px';
 });
