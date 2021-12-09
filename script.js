@@ -73,20 +73,19 @@ function checkForRandom() {
 
 function changeStat(move) {
   var statInd = Math.floor(((move + 1) / 2) - 0.5);
-  var localstat = stats[Object.keys(stats)[statInd]];
-  if (localstat >= 0 && points >= 0) {
-    localstat += Math.pow(-1, move);
+  if (stats[Object.keys(stats)[statInd]] >= 0 && points >= 0) {
+    stats[Object.keys(stats)[statInd]] += Math.pow(-1, move);
     points -= Math.pow(-1, move);
     if (points == -1) {
-      localstat -= 1;
+      stats[Object.keys(stats)[statInd]] -= 1;
       points += 1;
     }
-    if (localstat == 0) {
-      localstat += 1;
+    if (stats[Object.keys(stats)[statInd]] == 0) {
+      stats[Object.keys(stats)[statInd]] += 1;
       points -= 1;
     }
   }
-  document.getElementById(Object.keys(stats)[statInd]).innerHTML = localstat;
+  document.getElementById(Object.keys(stats)[statInd]).innerHTML = stats[Object.keys(stats)[statInd]];
   document.getElementById("statbox").innerHTML = points;
 }
 
