@@ -72,6 +72,14 @@ function checkForRandom() {
 }
 
 function changeStat(move) {
+  var statInd = (move + 1) / 2;
+  stats[statInd]++;
+  points--;
+  document.getElementsByClassName(Object.keys(stats)[statInd]).innerHTML = stats[statInd];
+  document.getElementById("statbox").innerHTML = points;
+}
+/*
+function changeStat(move) {
     switch (move) {
         case 'strUp':
             if (points > 0) {
@@ -171,7 +179,7 @@ function changeStat(move) {
             break;
     }
 }
-
+*/
 var mode = 'points';
 
 function switchModes() {
