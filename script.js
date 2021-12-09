@@ -1,7 +1,5 @@
 console.log("v0.0.1");
 
-import * as Module from './customFunctions.mjs';
-
 var stats = {
     "str": 12,
     "dex": 12,
@@ -412,4 +410,25 @@ function chooseOption(option) {
   document.getElementById("option13").innerHTML = "";
   extended = false;
   optionmode = "";
+}
+
+function showStats() {
+  document.getElementById("str").innerHTML = stats.str;
+  document.getElementById("dex").innerHTML = stats.dex;
+  document.getElementById("con").innerHTML = stats.con;
+  document.getElementById("int").innerHTML = stats.int;
+  document.getElementById("wis").innerHTML = stats.wis;
+  document.getElementById("cha").innerHTML = stats.cha;
+}
+
+function sumArray(array) {
+    for (
+        var
+            index = 0, // The iterator
+            length = array.length, // Cache the array length
+            sum = 0; // The total amount
+        index < length; // The "for"-loop condition
+        sum += array[index++] // Add number on each iteration
+    );
+    return sum;
 }
